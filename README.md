@@ -37,13 +37,13 @@ pip install -r requirements.txt
 ## ⚙️ Utilisation
 ```bash
 # Audit complet
-python3 main.py
+sudo python3 main.py
 
 # Audit ciblé (ex : SSH + utilisateurs)
-python3 main.py --check ssh users
+sudo python3 main.py --check ssh users
 
 # Générer un rapport Markdown
-python3 main.py --output markdown
+sudo python3 main.py --output markdown
 ```
 
 ## 📊 Exemple de sortie JSON
