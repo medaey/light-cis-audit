@@ -102,6 +102,7 @@ options:
 ```bash
 light-cis-audit/
 ├── audit/           # Modules pour chaque domaine (ssh, users, etc.)
+├── images/          # Dossier regroupant toutes les ressources graphiques (bannières, icônes, captures d'écran)
 ├── reports/         # Générateurs de rapports (json, markdown...)
 ├── tests/           # Tests unitaires
 ├── main.py          # CLI principale
