@@ -12,24 +12,28 @@ AVAILABLE_CHECKS = {
 
 def parse_args():
     parser = argparse.ArgumentParser(description="light-cis-audit: Audit système léger")
+
     parser.add_argument(
         "--check",
         nargs="+",
-        help="Liste des modules à auditer (ex: ssh users). Par défaut, tous.",
         choices=AVAILABLE_CHECKS.keys(),
-        default=None
+        default=None,
+        help="Liste des modules à auditer (ex: ssh users). Par défaut, tous les modules sont audités."
     )
+
     parser.add_argument(
         "--output",
         choices=["json", "markdown"],
         default="json",
-        help="Format de sortie (json par défaut)"
+        help="Format de sortie du rapport (json par défaut)."
     )
+
     parser.add_argument(
         "--output-file",
         type=str,
-        help="Chemin du fichier pour sauvegarder la sortie"
+        help="Chemin du fichier pour sauvegarder le rapport. Si non spécifié, le rapport est affiché dans la console."
     )
+
     return parser.parse_args()
 
 def main():

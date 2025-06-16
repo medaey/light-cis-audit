@@ -56,6 +56,28 @@ sudo python3 main.py --output json
 sudo python3 main.py --output markdown --output-file rapport.md
 ```
 
+### Afficher l’aide
+
+Pour afficher toutes les options disponibles et leur description détaillée, utilisez la commande suivante :
+```bash
+python3 main.py --help
+```
+Cela affichera un message d’aide comme celui-ci :
+```bash
+usage: main.py [-h] [--check {ssh,users} [{ssh,users} ...]] [--output {json,markdown}] [--output-file OUTPUT_FILE]
+
+light-cis-audit: Audit système léger
+
+options:
+  -h, --help            show this help message and exit
+  --check {ssh,users} [{ssh,users} ...]
+                        Liste des modules à auditer (ex: ssh users). Par défaut, tous les modules sont audités.
+  --output {json,markdown}
+                        Format de sortie du rapport (json par défaut).
+  --output-file OUTPUT_FILE
+                        Chemin du fichier pour sauvegarder le rapport. Si non spécifié, le rapport est affiché dans la console.
+```
+
 ## 📊 Exemple de sortie JSON
 
 ```json
@@ -91,7 +113,7 @@ light-cis-audit/
 - [ ] Option --fix pour corriger automatiquement certains problèmes
 - [ ] Rapport HTML interactif
 - [ ] Profils personnalisables (cis, minimal, custom)
-- [ ] Support pour RedHat/CentOS
+- [ ] Support pour RedHat/CentOS/Debian
 
 
 ## 🤝 Contribution
