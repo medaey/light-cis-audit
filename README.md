@@ -1,3 +1,5 @@
+![Bannière du projet](images/banner.png)
+
 # 🔒 light-cis-audit
 
 **light-cis-audit** est un outil d’audit système **léger**, **modulaire** et **auto-hébergeable**, conçu pour vérifier rapidement la sécurité de la configuration des serveurs Linux (Debian/RedHat), en s’inspirant des recommandations CIS ([Center for Internet Security](https://www.cisecurity.org/)) sans la lourdeur des outils traditionnels.
