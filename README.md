@@ -30,3 +30,67 @@
 git clone https://github.com/medaey/light-cis-audit.git
 cd light-cis-audit
 pip install -r requirements.txt
+```
+
+💡 L’outil nécessite Python 3.6+ et utilise les utilitaires Linux classiques (grep, awk, find, etc.)
+
+## ⚙️ Utilisation
+```bash
+# Audit complet
+python3 main.py
+
+# Audit ciblé (ex : SSH + utilisateurs)
+python3 main.py --check ssh users
+
+# Générer un rapport Markdown
+python3 main.py --output markdown
+```
+
+## 📊 Exemple de sortie JSON
+
+```json
+[
+  {
+    "id": "SSH-001",
+    "description": "SSH root login must be disabled",
+    "result": "PASS",
+    "details": "PermitRootLogin is set to no"
+  },
+  {
+    "id": "USER-002",
+    "description": "No user account without password",
+    "result": "FAIL",
+    "details": "User 'backup' has no password set"
+  }
+]
+```
+
+## 📁 Arborescence
+```bash
+light-cis-audit/
+├── audit/           # Modules pour chaque domaine (ssh, users, etc.)
+├── reports/         # Générateurs de rapports (json, markdown...)
+├── tests/           # Tests unitaires
+├── main.py          # CLI principale
+├── requirements.txt
+└── README.md
+```
+
+## ✅ Roadmap
+
+- [ ] Option --fix pour corriger automatiquement certains problèmes
+- [ ] Rapport HTML interactif
+- [ ] Profils personnalisables (cis, minimal, custom)
+- [ ] Support pour RedHat/CentOS
+
+
+## 🤝 Contribution
+Les contributions sont les bienvenues !
+Suggestions, issues et pull requests sont ouvertes à tous.
+
+## 🛡️ Disclaimer
+Ce projet est fourni à des fins **d’audit rapide.**
+Il **ne remplace pas un audit complet** réalisé par un professionnel de la sécurité.
+
+## 👤 Auteur
+Projet développé par @medaey
