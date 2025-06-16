@@ -34,16 +34,26 @@ pip install -r requirements.txt
 
 💡 L’outil nécessite Python 3.6+ et utilise les utilitaires Linux classiques (grep, awk, find, etc.)
 
-## ⚙️ Utilisation
+## ⚡ Usage
+### Lancer tous les checks (par défaut en JSON)
 ```bash
-# Audit complet
 sudo python3 main.py
+```
 
-# Audit ciblé (ex : SSH + utilisateurs)
+### Lancer des checks ciblés (exemple SSH + utilisateurs)
+```bash
 sudo python3 main.py --check ssh users
+```
 
-# Générer un rapport Markdown
+### Choisir le format de sortie (`json` ou `markdown`)
+```bash
 sudo python3 main.py --output markdown
+sudo python3 main.py --output json
+```
+
+### Sauvegarder le rapport dans un fichier
+```bash
+sudo python3 main.py --output markdown --output-file rapport.md
 ```
 
 ## 📊 Exemple de sortie JSON
