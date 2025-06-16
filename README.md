@@ -1,9 +1,8 @@
 # 🔒 light-cis-audit
 
-**light-cis-audit** est un outil d’audit système **léger**, **modulaire** et **auto-hébergeable**, conçu pour vérifier rapidement la sécurité de la configuration des serveurs Linux (Debian/Ubuntu), en s’inspirant des recommandations CIS (Center for Internet Security) sans la lourdeur des outils traditionnels.
+**light-cis-audit** est un outil d’audit système **léger**, **modulaire** et **auto-hébergeable**, conçu pour vérifier rapidement la sécurité de la configuration des serveurs Linux (Debian/RedHat), en s’inspirant des recommandations CIS ([Center for Internet Security](https://www.cisecurity.org/)) sans la lourdeur des outils traditionnels.
 
 ---
-
 ## 🎯 Objectifs
 
 - ✅ Vérifier les configurations critiques (SSH, utilisateurs, firewall, permissions…)
@@ -21,7 +20,6 @@
 - 🧱 Analyse des fichiers à permissions spéciales (SUID)
 - 🧪 Résultats catégorisés : `PASS`, `FAIL`, `WARN`, `INFO`
 - 🖥️ Interface en ligne de commande minimaliste
-
 ---
 
 ## 🚀 Installation
@@ -29,9 +27,10 @@
 ```bash
 git clone https://github.com/medaey/light-cis-audit.git
 cd light-cis-audit
+python3 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
-
 💡 L’outil nécessite Python 3.6+ et utilise les utilitaires Linux classiques (grep, awk, find, etc.)
 
 ## ⚡ Usage
