@@ -70,7 +70,7 @@ def check_file_permissions():
             actual_user = pwd.getpwuid(stat_info.st_uid).pw_name
             actual_group = grp.getgrgid(stat_info.st_gid).gr_name
 
-            mode_ok = actual_mode == file["expected_mode"]
+            mode_ok = (actual_mode & file["expected_mode"]) == actual_mode
             user_ok = actual_user == file["expected_user"]
             group_ok = actual_group == file["expected_group"]
 
