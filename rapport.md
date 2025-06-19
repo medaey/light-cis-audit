@@ -47,7 +47,6 @@ All accounts have non-empty password fields
 
 ## PERM-004 ✅
 **Description:** Check permissions and ownership of /etc/gshadow
-**Statut:** PASS
 **Détails:**
 ```
 /etc/gshadow has correct permissions and ownership
