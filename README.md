@@ -30,6 +30,7 @@
 ```bash
 git clone https://github.com/medaey/light-cis-audit.git
 cd light-cis-audit
+chmod +x run-audit.sh
 ```
 
 Le script `run-audit.sh` se charge de créer et activer l’environnement virtuel, installer les dépendances et lancer l’audit.
