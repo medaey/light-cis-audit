@@ -47,7 +47,11 @@ def main():
     for check_group in selected_checks:
         checks = AVAILABLE_CHECKS.get(check_group, [])
         for check in checks:
-            results.append(check())
+            res = check()
+            if isinstance(res, list):
+                results.extend(res)
+            else:
+                results.append(res)
 
     if args.output == "markdown":
         output_data = to_markdown(results)

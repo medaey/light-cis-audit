@@ -17,3 +17,48 @@ PermitRootLogin is set to no
 All accounts have non-empty password fields
 ```
 ---
+
+## PERM-001 ✅
+**Description:** Check permissions and ownership of /etc/passwd
+**Statut:** PASS
+**Détails:**
+```
+/etc/passwd has correct permissions and ownership
+```
+---
+
+## PERM-002 ✅
+**Description:** Check permissions and ownership of /etc/shadow
+**Statut:** PASS
+**Détails:**
+```
+/etc/shadow has correct permissions and ownership
+```
+---
+
+## PERM-003 ✅
+**Description:** Check permissions and ownership of /etc/group
+**Statut:** PASS
+**Détails:**
+```
+/etc/group has correct permissions and ownership
+```
+---
+
+## PERM-004 ✅
+**Description:** Check permissions and ownership of /etc/gshadow
+**Statut:** PASS
+**Détails:**
+```
+/etc/gshadow has correct permissions and ownership
+```
+---
+
+## PERM-005 ✅
+**Description:** Check permissions and ownership of /etc/sudoers
+**Statut:** PASS
+**Détails:**
+```
+/etc/sudoers has correct permissions and ownership
+```
+---
