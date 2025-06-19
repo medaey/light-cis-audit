@@ -25,6 +25,24 @@
 
 ---
 
+
+## 🖥️ Prérequis système
+Avant d’installer et d’utiliser light-cis-audit, assurez-vous que les outils suivants sont disponibles sur votre système :
+
+### Debian / Ubuntu
+
+```bash
+sudo apt update
+sudo apt install -y git python3 python3-venv python3-pip
+```
+
+### RedHat / CentOS / AlmaLinux / Fedora / RockyLinux
+
+```bash
+sudo dnf install -y git python3 python3-venv python3-pip
+```
+> Sur les anciennes versions, utilisez `yum` à la place de `dnf` si nécessaire.
+
 ## 🚀 Installation
 
 ```bash
