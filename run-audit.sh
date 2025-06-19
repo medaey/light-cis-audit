@@ -40,7 +40,11 @@ if ! command -v pip &> /dev/null; then
 fi
 
 echo -e "${GREEN}📦 Installation des dépendances...${NC}"
-pip install --break-system-packages -r requirements.txt
+if pip install --help | grep -q -- "--break-system-packages"; then
+    pip install --break-system-packages -r requirements.txt
+else
+    pip install -r requirements.txt
+fi
 
 echo -e "${GREEN}🔍 Lancement de l'audit...${NC}"
 sudo python3 main.py "$@"
