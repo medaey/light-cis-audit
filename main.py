@@ -3,11 +3,14 @@ import json
 
 from audit.ssh import check_ssh_root_login
 from audit.users import check_users_without_password
+from audit.permissions import check_file_permissions
 from reports.markdown import to_markdown
+
 
 AVAILABLE_CHECKS = {
     "ssh": [check_ssh_root_login],
     "users": [check_users_without_password],
+    "permissions": [check_file_permissions],
 }
 
 def parse_args():
